@@ -1,0 +1,145 @@
+/* the ruby/furigana for some fonts floats very high above the text.
+   position:relative allows it to be moved; top 30px moves the top down
+   which makes it appear comfortably above the Noto font in a large size.
+   if using other fonts, or sizes, needs to be adjusted.
+ */
+ruby rt {
+	font-size: 18px;
+	position: relative;
+	top: 30px;
+}
+ruby rb {}
+
+
+/*will be moving background to in front/back template,*/
+/*so that can randomly pick a background*/
+.card {
+	font-family: Noto Sans CJK JP Regular;
+	font-size: 50px;
+	text-align: center;
+	color: black;
+	background: url("testbg1.jpg");
+	background-attachment: fixed;
+	background-position: center;
+}
+	
+	
+/* blurring the background doesn't work in qt 4.whatever.*/
+/* anki 2.2 or whatever will be using qt5.whatever, and then it'd fine.*/
+/* leaving it for now; this also causes the rounded corners to work nicely.*/
+.blurred-bg {
+	width: 90%;
+	margin: 10px auto;
+	overflow: hidden;
+	background: inherit;
+	border-radius: 10px;
+}
+
+.blurred-bg:after{
+	background: inherit; 
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	left: -25%;
+	top: -25%
+	filter: blur(10px);
+	z-index: 0;
+}
+
+.blurred-bg .content {
+	z-index: 1;
+}
+
+/*partial transparency!*/
+.frontbg {
+	background-color: rgba(0,0,0,0.55);
+	color: #fff;
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+
+.backbg {
+	background-color: rgba(255,255,255,.85);
+	padding: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: black;
+	font-size: 28px;
+}
+
+/*i'd like to make a whiteboard section with a box to draw kanji in,
+  in the case that i get my shit together enough to have a desktop
+  tablet whiteboard or get all the plugins working on ankidroid.
+ */
+
+
+/*changes hint based on maturity of the card.*/
+/*i have a plugin that changes this automatically when answering card.*/
+.mature {
+	visibility: hidden;
+}
+
+.young span {
+	visibility: hidden;
+}
+
+.young:hover span {
+	visibility: visible;
+}
+
+.new {
+	visibility: visible;
+}
+
+/*styling for individual fields*/
+.prompt {}
+
+.engkeyword {
+	font-size: 20px;
+}
+
+.kanji {
+	font-size: 80px;
+}
+
+/*want to make this be a randomish selection of handwriting fonts*/
+/*this would require probably moving some of it to front/back, and js*/
+.handwriting {
+	font-family:YOzFont;
+}
+
+.strokeorder{
+	font-size: 120px;
+	font-family:KanjiStrokeOrders, myfont;
+}
+
+.jpnkeyword {
+    font-size: 100px;
+}
+
+/*catch-all for the little info fields that are interesting but not necessary*/
+.details {
+	font-size: 8px;
+	color: grey;
+}
+
+
+/*horizontal rule*/
+hr {
+	height: 1px;
+	font-size: 5px;
+	border: 0;
+	background: light grey;
+}
+
+/*dotted underlines, if you use underline.*/
+u {
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+/*makes handwriting font work on android, if KanjiStrokeOrders.....tff is in your media folder.*/
+@font-face { font-family: myfont; src: url('_KanjiStrokeOrders_v4.001.ttf'); }
+
+
