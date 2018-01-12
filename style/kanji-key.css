@@ -11,14 +11,14 @@ ruby rt {
 ruby rb {}
 
 
-/*will be moving background to in front/back template,*/
-/*so that can randomly pick a background*/
+/* on my cards currently, background is chosen by javascript. 
+   if i realize javascript is bad later, can restore to here. */
 .card {
 	font-family: Noto Sans CJK JP Regular;
 	font-size: 50px;
 	text-align: center;
 	color: black;
-	background: url("testbg1.jpg");
+/*	background: url("_testbg1.jpg");*/
 	background-attachment: fixed;
 	background-position: center;
 }
