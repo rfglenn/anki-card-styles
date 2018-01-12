@@ -1,0 +1,25 @@
+add this to html:
+
+<pre id="debug" />
+
+add this to styles: (might need to be different depending on what the card looks like, this is just to make it show up).
+
+#debug {
+  background-color: white;
+  height: 20em;
+  font-family: monospace;
+  color: black;
+  text-align: left;
+  font-size:10pt;
+}
+
+add this to javascript at the top:
+
+var console = {
+    log: function(s) {
+        document.getElementById('debug').innerText += s+'\n';
+    }
+};
+
+then you can use console.log and have it show up.
+
