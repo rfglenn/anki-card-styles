@@ -6,15 +6,16 @@ function pickBackground() {
     //number should increment every ~16 minutes
     var nonRandomNumber = Math.floor(((new Date).getTime())/1000000);
     var backgroundIndex = nonRandomNumber % numBackgrounds;
-        
+
     return ("_".concat(backgroundsArray[backgroundIndex], ".jpg"));
-}       
-        
+}
+
 function setBackground() {
-    var background = pickBackground();
-    var divs = document.getElementsByClassName('card');
-    for (var i = 0; i < divs.length; i++) {
-    divs[i].style.backgroundImage = 'url("'+background+'")';
+    var background = 'url("'+pickBackground()+'")';
+
+    if (document.body.style.backgroundImage != background) {
+        document.body.style.backgroundImage = background;
     }
 }
-window.setTimeout(setBackground, 0);
+
+setBackground();
