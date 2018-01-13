@@ -1,5 +1,9 @@
 css & javascript that i'm using to make my cards in anki look nice.
 
+## example cards
+![Example Front Card](/docs/example-front-card.png "Example Front")
+![Example Back Card](/docs/example-back-card.png "Example Back")
+
 ## notes on usage, perhaps mostly for myself:
 
 ### css
