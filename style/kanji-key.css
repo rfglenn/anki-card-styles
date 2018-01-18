@@ -4,9 +4,9 @@
    if using other fonts, or sizes, needs to be adjusted.
  */
 ruby rt {
-	font-size: 18px;
-	position: relative;
-	top: 30px;
+    font-size: 18px;
+    position: relative;
+    top: 30px;
 }
 ruby rb {}
 
@@ -14,58 +14,61 @@ ruby rb {}
 /* on my cards currently, background is chosen by javascript. 
    if i realize javascript is bad later, can restore to here. */
 .card {
-	font-family: Noto Sans CJK JP Regular;
-	font-size: 50px;
-	text-align: center;
-	color: black;
-/*	background: url("_testbg1.jpg");*/
-	background-attachment: fixed;
-	background-position: center;
+    font-family: Noto Sans CJK JP Regular;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+/*    background: url("_testbg1.jpg");*/
+    background-attachment: fixed;
+    background-position: center;
 }
-	
-	
-/* blurring the background doesn't work in qt 4.whatever.*/
-/* anki 2.2 or whatever will be using qt5.whatever, and then it'd fine.*/
-/* leaving it for now; this also causes the rounded corners to work nicely.*/
+    
+    
+/* blurring the background doesn't work in qt 4.whatever.
+   anki 2.1 or whatever will be using qt5.whatever, and then it's fine.
+   except i tried anki 2.1 beta, and it doesn't do anything yet. further research needed.
+   leaving it for now; this also causes the rounded corners to work nicely.*/
 .blurred-bg {
-	width: 90%;
-	margin: 10px auto;
-	overflow: hidden;
-	background: inherit;
-	border-radius: 10px;
+    width: 90%;
+    margin: 10px auto;
+    overflow: hidden;
+    background: inherit;
+    border-radius: 10px;
 }
 
+/*experimenting to get blurring to work in 2.1.*/
 .blurred-bg:after{
-	background: inherit; 
-	width: 150%;
-	height: 150%;
-	position: absolute;
-	left: -25%;
-	top: -25%
-	filter: blur(10px);
-	z-index: 0;
+/*    content: '';*/
+    background: inherit; 
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    left: -25%;
+    top: -25%
+    filter: blur(10px);
+    z-index: 0;
 }
 
 .blurred-bg .content {
-	z-index: 1;
+    z-index: 1;
 }
 
 /*partial transparency!*/
 .frontbg {
-	background-color: rgba(0,0,0,0.55);
-	color: #fff;
-	padding-top: 0px;
-	padding-bottom: 15px;
+    background-color: rgba(0,0,0,0.55);
+    color: #fff;
+    padding-top: 0px;
+    padding-bottom: 15px;
 }
 
 .backbg {
-	background-color: rgba(255,255,255,.85);
-	padding: 15px;
-	padding-bottom: 15px;
-	padding-left: 30px;
-	padding-right: 30px;
-	color: black;
-	font-size: 28px;
+    background-color: rgba(255,255,255,.85);
+    padding: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+    font-size: 28px;
 }
 
 /*i'd like to make a whiteboard section with a box to draw kanji in,
@@ -77,41 +80,41 @@ ruby rb {}
 /*changes hint based on maturity of the card.*/
 /*i have a plugin that changes this automatically when answering card.*/
 .mature {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 .young span {
-	visibility: hidden;
+    visibility: hidden;
 }
 
 .young:hover span {
-	visibility: visible;
+    visibility: visible;
 }
 
 .new {
-	visibility: visible;
+    visibility: visible;
 }
 
 /*styling for individual fields*/
 .prompt {}
 
 .engkeyword {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 .kanji {
-	font-size: 80px;
+    font-size: 80px;
 }
 
 /*want to make this be a randomish selection of handwriting fonts*/
 /*this would require probably moving some of it to front/back, and js*/
 .handwriting {
-	font-family:YOzFont;
+    font-family:YOzFont;
 }
 
 .strokeorder{
-	font-size: 120px;
-	font-family:KanjiStrokeOrders, myfont;
+    font-size: 120px;
+    font-family:KanjiStrokeOrders, myfont;
 }
 
 .jpnkeyword {
@@ -120,23 +123,23 @@ ruby rb {}
 
 /*catch-all for the little info fields that are interesting but not necessary*/
 .details {
-	font-size: 8px;
-	color: grey;
+    font-size: 8px;
+    color: grey;
 }
 
 
 /*horizontal rule*/
 hr {
-	height: 1px;
-	font-size: 5px;
-	border: 0;
-	background: light grey;
+    height: 1px;
+    font-size: 5px;
+    border: 0;
+    background: light grey;
 }
 
 /*dotted underlines, if you use underline.*/
 u {
-	text-decoration: none;
-	border-bottom: 1px dotted;
+    text-decoration: none;
+    border-bottom: 1px dotted;
 }
 
 /*makes handwriting font work on android, if KanjiStrokeOrders.....tff is in your media folder.*/
