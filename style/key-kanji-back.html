@@ -1,27 +1,54 @@
-<div class=blurred-bg>
+<<div class=blurred-bg>
 	<div class=frontbg>
-		{{Prompt Reading}}
+ 		{{Japanese Keywords Prompt}} 
 		<div class=engkeyword>
 			{{English Keyword}}
 		</div>
 	</div>
 
 	 <div class=backbg>
+
 		<span class=strokeorder>
 			{{Kanji}}
 		</span>
 
 		<div class=jpnkeyword> 		 
-			{{furigana:Furigana}}
+			{{furigana:Japanese Keywords Furigana}}
 		</div>
 
-		<hr>
-		<div class=details>
-		Heisig #{{Heisig number}}, L-{{Lesson number}} | JLPT {{JLPT level}}
+		<div>
+			<span class=neat>
+				{{Kanji}}
+			</span>
+			<span class=cute>
+				{{Kanji}}
+			</span>
+			<span class=messy>
+				{{Kanji}}
+			</span>
 		</div>
+
+		<hr> 
+
+		<div class=examples>
+			{{furigana:Joyo On (Furigana)}}
+		</div>
+ 
+		<div class=examples>
+			{{furigana:Joyo Kun (Furigana)}}
+		</div>
+		<div class=engmeanings> 
+			<div class={{Keyword Familiarity}}>
+				{{English Meanings}}
+			</div>
+		</div>
+		<hr> 
+
+		<div class=details>
+			Heisig #{{Heisig number}}, L-{{Lesson number}} | JLPT {{JLPT level}} | Kanken {{Kanken Level}}
+		</div>		
 	</div>
 </div>
-
 
 <script type="text/javascript" src="_background-picker.js">
 </script>

@@ -2,13 +2,18 @@
    position:relative allows it to be moved; top 30px moves the top down
    which makes it appear comfortably above the Noto font in a large size.
    if using other fonts, or sizes, needs to be adjusted.
+   having said that... it's maybe only true for 2.0 anki.
  */
 ruby rt {
-    font-size: 18px;
+    font-size: 30%;
     position: relative;
-    top: 30px;
+/*   top: 30px;*/
+    transform:translateY(60%);
 }
-ruby rb {}
+ruby rb {
+    line-height: 1em;
+}
+
 
 
 /* on my cards currently, background is chosen by javascript. 
@@ -56,7 +61,7 @@ ruby rb {}
 /*partial transparency!*/
 .frontbg {
     background-color: rgba(0,0,0,0.55);
-    color: #fff;
+    color: rgba(255,255,255,.9);
     padding-top: 0px;
     padding-bottom: 15px;
 }
@@ -67,7 +72,7 @@ ruby rb {}
     padding-bottom: 15px;
     padding-left: 30px;
     padding-right: 30px;
-    color: black;
+    color: rgba(0,0,0,.9);
     font-size: 28px;
 }
 
@@ -108,8 +113,19 @@ ruby rb {}
 
 /*want to make this be a randomish selection of handwriting fonts*/
 /*this would require probably moving some of it to front/back, and js*/
-.handwriting {
-    font-family:YOzFont;
+.neat {
+    font-family:'SanafonMugiV2.60';
+    font-size: 100px;
+}
+
+.cute {
+    font-family:ChihayaGothic;
+    font-size: 100px;
+}
+
+.messy {
+    font-family:ArmedBanana;
+    font-size:110px;
 }
 
 .strokeorder{
@@ -118,7 +134,15 @@ ruby rb {}
 }
 
 .jpnkeyword {
-    font-size: 100px;
+    font-size: 80px;
+}
+
+.examples {
+    font-size: 40px;
+}
+
+.engmeanings {
+    font-size: 15px;
 }
 
 /*catch-all for the little info fields that are interesting but not necessary*/
@@ -131,10 +155,11 @@ ruby rb {}
 /*horizontal rule*/
 hr {
     height: 1px;
-    font-size: 5px;
+    font-size: 15px;
     border: 0;
     background: light grey;
 }
+
 
 /*dotted underlines, if you use underline.*/
 u {
