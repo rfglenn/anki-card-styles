@@ -107,6 +107,9 @@ ruby rb {
     font-size: 20px;
 }
 
+.jpnkeyword {
+    font-size: 60px;
+}
 .kanji {
     font-size: 80px;
 }
@@ -133,9 +136,7 @@ ruby rb {
     font-family:KanjiStrokeOrders, myfont;
 }
 
-.jpnkeyword {
-    font-size: 80px;
-}
+
 
 .examples {
     font-size: 40px;
