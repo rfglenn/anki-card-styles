@@ -26,6 +26,12 @@ ruby rb {
 /*    background: url("_testbg1.jpg");*/
     background-attachment: fixed;
     background-position: center;
+    position: relative;
+    background-image: inherit;
+}
+
+#qa {
+    background: inherit;
 }
     
     
@@ -39,23 +45,26 @@ ruby rb {
     overflow: hidden;
     background: inherit;
     border-radius: 10px;
+    z-index: 0;
+    position: relative;
 }
 
 /*experimenting to get blurring to work in 2.1.*/
 .blurred-bg:after{
-/*    content: '';*/
-    background: inherit; 
+    content: '';
+    background: inherit;
+    display: block;
     width: 150%;
     height: 150%;
     position: absolute;
     left: -25%;
-    top: -25%
+    top: -25%;
     filter: blur(10px);
-    z-index: 0;
+    z-index: -1;
 }
 
-.blurred-bg .content {
-    z-index: 1;
+.frontbg, .backbg {
+    z-index: 2;
 }
 
 /*partial transparency!*/
