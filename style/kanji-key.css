@@ -37,8 +37,7 @@ ruby rb {
     
 /* blurring the background doesn't work in qt 4.whatever.
    anki 2.1 or whatever will be using qt5.whatever, and then it's fine.
-   except i tried anki 2.1 beta, and it doesn't do anything yet. further research needed.
-   leaving it for now; this also causes the rounded corners to work nicely.*/
+   */
 .blurred-bg {
     width: 90%;
     margin: 10px auto;
@@ -49,7 +48,6 @@ ruby rb {
     position: relative;
 }
 
-/*experimenting to get blurring to work in 2.1.*/
 .blurred-bg:after{
     content: '';
     background: inherit;
