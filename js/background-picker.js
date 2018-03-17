@@ -1,5 +1,6 @@
 function pickBackground() {                                     
-    var backgroundsArray = ["RikugienLeaves", "YoyogiParkLeaves", "KoshikawaSkyline"];
+    var backgroundsArray = ["blackGateYushimaSeidoTokyo", "booksJimbocho", "bookstoreJimbocho", "bridgeShinjukuGyoen", "capacitorsAkihabara", "catMangaIkebukuro", "coinsGinkakujiKyoto", "craneStacksZeniariKamakura", "crowdedBridgeRikugienTokyo", "crowdedSkylineKiyomizudera", "crowdRikugienTokyo", "darumaPikachuPokecenter", "distantLanternsYasakaKyoto", "entryZeniariKamakura", "foxCeramicsInariKamakura", "geometricKiyomizuderaKyoto", "ginkakujiStairsKyoto", "gyozaIkebukuro", "lanternAsakusa", "lanternShinjukuGyoen", "lanternsYasakaKyoto", "leavesKyoto", "metallicMeijiJingu", "mossKyoto", "nightAlleyIkebukuro", "nishikiKyoto", "philosophersPathKyoto", "planarLeavesYoyogi", "redLeavesShinjukuGyoen", "sakeMeijiJingu", "signsAkihabara", "skylineKoshikawaTokyo", "stairsKiyomizudera", "stoptakingselfiesAsakusa", "sunsetEnoshima", "traditionalStreetKyoto", "triforceEngakujiKamakura", "trunkRikugienTokyo", "tsukemonoNukadokoNishikiKyoto", "wallYasakaKyoto", "woodblockAsakusa", "yellowLeavesRikugienTokyo", "yellowLeavesYoyogi"];
+
     var numBackgrounds = backgroundsArray.length;            
                                                                 
     //returns time in milliseconds, so to get it to the actual number i want, divide by 1000*1000
