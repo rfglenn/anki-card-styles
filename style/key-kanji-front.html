@@ -1,15 +1,22 @@
 <div class=blurred-bg>
 	<div class=frontbg>
- 		{{Japanese Keywords Prompt}} 
+		<div class=key>
+ 			{{furigana:Japanese Keywords Furigana}}
+		</div>
 		<div class=engkeyword>
 			<div class={{Keyword Familiarity}}>
 				<span>
 					{{English Keyword}}
 				</span>
 			</div>
-		 </div> 
+		</div> 
 	</div> 
 </div>
 
-<script type="text/javascript" src="_background-picker.js">
-</script>
+<div class="blurred-bg">
+	<div class="backbg" id="whiteboard-container">
+	</div>
+</div>
+
+<script type="text/javascript" src="_whiteboard.js"></script>
+<script type="text/javascript" src="_background-picker.js"></script>

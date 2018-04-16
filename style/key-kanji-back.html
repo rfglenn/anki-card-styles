@@ -1,35 +1,46 @@
-<<div class=blurred-bg>
+<div class=blurred-bg>
 	<div class=frontbg>
- 		{{Japanese Keywords Prompt}} 
-		<div class=engkeyword>
-			{{English Keyword}}
+		<div class=key>
+ 			{{furigana:Japanese Keywords Furigana}}
 		</div>
+		<div class=engkeyword>
+			<div class={{Keyword Familiarity}}>
+				<span>
+					{{English Keyword}}
+				</span>
+			</div>
+		</div> 
+	</div> 
+</div>
+
+<div class="blurred-bg">
+	<div class="backbg" id="whiteboard-container">
+		<canvas id="whiteboard"></canvas>
 	</div>
+</div>
 
+<div class=blurred-bg>
 	 <div class=backbg>
-
 		<span class=strokeorder>
 			{{Kanji}}
 		</span>
-
-		<div class=jpnkeyword> 		 
-			{{furigana:Japanese Keywords Furigana}}
+		<span class=cute>
+			{{Kanji}}
+		</span>
+		<span class=neat>
+			{{Kanji}}
+		</span>
+		<span class=messy>
+			{{Kanji}}
+		</span>
+		<div class=jpnkeyword>
+ 			{{furigana:Japanese Keywords Furigana}} 
 		</div>
+	</div>
+</div>
 
-		<div>
-			<span class=neat>
-				{{Kanji}}
-			</span>
-			<span class=cute>
-				{{Kanji}}
-			</span>
-			<span class=messy>
-				{{Kanji}}
-			</span>
-		</div>
-
-		<hr> 
-
+<div class=blurred-bg>
+	<div class=backbg>
 		<div class=examples>
 			{{furigana:Joyo On (Furigana)}}
 		</div>
@@ -50,5 +61,7 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="_background-picker.js">
-</script>
+<script type="text/javascript" src="_whiteboard_answer.js"></script>
+
+<script type="text/javascript" src="_background-picker.js"></script>
+

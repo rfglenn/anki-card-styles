@@ -116,8 +116,29 @@ ruby rb {
 }
 
 /*styling for individual fields*/
+
+.key {
+    font-size: 45px;
+}
+
+/* in the field used for the prompt, the target kanji is wrapped up in <span class='target'></span>
+ * so on the front of the card, the target is hidden; on the back, visible
+ * */
+.key .target{
+    visibility: hidden;
+}
+
+#whiteboard-container{
+	cursor: crosshair;
+	padding: 0;
+	height: 150px;
+}
+
+.backbg #whiteboard-container {
+	margin-left: -30px; /* kind of a hack... */
+}
+
 .prompt {
-    font-weight: bolder;
 }
 
 .engkeyword {
